@@ -364,7 +364,7 @@ public class Mario extends RigidBody {
         FixtureDef fixtureDef = new FixtureDef();
         fixtureDef.shape = shape;
         fixtureDef.filter.categoryBits = GameManager.MARIO_BIT;
-        fixtureDef.filter.maskBits = GameManager.GROUND_BIT | GameManager.ENEMY_WEAKNESS_BIT | GameManager.ENEMY_INTERACT_BIT | GameManager.ENEMY_LETHAL_BIT | GameManager.ITEM_BIT | GameManager.FLAGPOLE_BIT;
+        fixtureDef.filter.maskBits = GameManager.GROUND_BIT | GameManager.ENEMY_WEAKNESS_BIT | GameManager.ENEMY_INTERACT_BIT | GameManager.ENEMY_LETHAL_BIT | GameManager.ITEM_BIT | GameManager.FLAGPOLE_BIT | GameManager.LAVA_BIT;
 
         body.createFixture(fixtureDef).setUserData(this);
 
@@ -407,7 +407,7 @@ public class Mario extends RigidBody {
         FixtureDef fixtureDef = new FixtureDef();
         fixtureDef.shape = shape;
         fixtureDef.filter.categoryBits = GameManager.MARIO_BIT;
-        fixtureDef.filter.maskBits = GameManager.GROUND_BIT | GameManager.ENEMY_WEAKNESS_BIT | GameManager.ENEMY_INTERACT_BIT | GameManager.ENEMY_LETHAL_BIT | GameManager.ITEM_BIT | GameManager.FLAGPOLE_BIT;
+        fixtureDef.filter.maskBits = GameManager.GROUND_BIT | GameManager.ENEMY_WEAKNESS_BIT | GameManager.ENEMY_INTERACT_BIT | GameManager.ENEMY_LETHAL_BIT | GameManager.ITEM_BIT | GameManager.FLAGPOLE_BIT | GameManager.LAVA_BIT;
 
         body.createFixture(fixtureDef).setUserData(this);
 
@@ -451,7 +451,7 @@ public class Mario extends RigidBody {
         FixtureDef fixtureDef = new FixtureDef();
         fixtureDef.shape = shape;
         fixtureDef.filter.categoryBits = GameManager.MARIO_BIT;
-        fixtureDef.filter.maskBits = GameManager.GROUND_BIT | GameManager.ENEMY_WEAKNESS_BIT | GameManager.ENEMY_INTERACT_BIT | GameManager.ENEMY_LETHAL_BIT | GameManager.ITEM_BIT | GameManager.FLAGPOLE_BIT;
+        fixtureDef.filter.maskBits = GameManager.GROUND_BIT | GameManager.ENEMY_WEAKNESS_BIT | GameManager.ENEMY_INTERACT_BIT | GameManager.ENEMY_LETHAL_BIT | GameManager.ITEM_BIT | GameManager.FLAGPOLE_BIT | GameManager.LAVA_BIT;
 
         body.createFixture(fixtureDef).setUserData(this);
 

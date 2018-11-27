@@ -39,6 +39,7 @@ public class GameManager implements Disposable {
     public static final short ITEM_BIT = 1 << 6;
     public static final short WEAPON_BIT = 1 << 7;
     public static final short FLAGPOLE_BIT = 1 << 8;
+    public static final short LAVA_BIT = 1 << 9;
 
     public static final String musicPath = "audio/music/";
 

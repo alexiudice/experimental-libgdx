@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="212" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="676">
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="212" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="680">
  <tileset firstgid="1" name="tileset_gutter" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="924" columns="33">
   <image source="tileset_gutter.png" width="594" height="504"/>
  </tileset>
@@ -96,13 +96,9 @@
   <object id="80" gid="1" x="240" y="240" width="16" height="16"/>
   <object id="81" gid="1" x="272" y="240" width="16" height="16"/>
   <object id="82" gid="1" x="272" y="224" width="16" height="16"/>
-  <object id="83" gid="1" x="288" y="224" width="16" height="16"/>
   <object id="84" gid="1" x="288" y="240" width="16" height="16"/>
-  <object id="85" gid="1" x="320" y="224" width="16" height="16"/>
-  <object id="86" gid="1" x="304" y="224" width="16" height="16"/>
   <object id="87" gid="1" x="304" y="240" width="16" height="16"/>
   <object id="88" gid="1" x="320" y="240" width="16" height="16"/>
-  <object id="89" gid="1" x="336" y="224" width="16" height="16"/>
   <object id="90" gid="1" x="336" y="240" width="16" height="16"/>
   <object id="91" gid="1" x="352" y="240" width="16" height="16"/>
   <object id="92" gid="1" x="352" y="224" width="16" height="16"/>
@@ -431,6 +427,12 @@
   <object id="666" gid="271" x="192" y="176" width="16" height="16"/>
   <object id="668" gid="272" x="208" y="176" width="16" height="16"/>
   <object id="669" gid="271" x="128" y="176" width="16" height="16"/>
+  <object id="679" gid="1" x="336" y="224" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup id="13" name="Lava">
+  <object id="676" gid="796" x="320" y="224" width="16" height="16"/>
+  <object id="677" gid="796" x="304" y="224" width="16" height="16"/>
+  <object id="678" gid="796" x="288" y="224" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="4" name="MetalBlocks">
   <object id="504" gid="34" x="2112" y="208" width="16" height="16"/>

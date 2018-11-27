@@ -10,6 +10,7 @@ import com.polygongames.mario.actors.enemies.Enemy;
 import com.polygongames.mario.actors.maptiles.Brick;
 import com.polygongames.mario.actors.maptiles.CoinBlock;
 import com.polygongames.mario.actors.maptiles.Flagpole;
+import com.polygongames.mario.actors.maptiles.Lava;
 import com.polygongames.mario.actors.maptiles.MapTileObject;
 import com.polygongames.mario.actors.maptiles.Pipe;
 import com.polygongames.mario.actors.maptiles.Rock;
@@ -55,6 +56,17 @@ public class WorldCreator {
                 mapTileObjects.add(new Pipe(playScreen, (x + 8) / GameManager.PPM, (y + 8) / GameManager.PPM, (TiledMapTileMapObject) mapObject));
             }
         }
+
+        mapLayer = tiledMap.getLayers().get("Lava");
+        if (mapLayer != null) {
+            for (MapObject mapObject : mapLayer.getObjects()) {
+                float x = ((TiledMapTileMapObject) mapObject).getX();
+                float y = ((TiledMapTileMapObject) mapObject).getY();
+
+                mapTileObjects.add(new Lava(playScreen, (x + 8) / GameManager.PPM, (y + 8) / GameManager.PPM, (TiledMapTileMapObject) mapObject));
+            }
+        }
+
 
         mapLayer = tiledMap.getLayers().get("Pipes");
         if (mapLayer != null) {

@@ -23,6 +23,9 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.polygongames.mario.SuperMario;
+import com.polygongames.mario.actors.Mario;
+import com.polygongames.mario.actors.effects.BrickDebris;
+import com.polygongames.mario.actors.effects.Effect;
 import com.polygongames.mario.actors.effects.FlippingCoin;
 import com.polygongames.mario.actors.effects.SpawningEffect;
 import com.polygongames.mario.actors.enemies.Enemy;
@@ -33,16 +36,14 @@ import com.polygongames.mario.actors.items.SpawningItem;
 import com.polygongames.mario.actors.items.Star;
 import com.polygongames.mario.actors.maptiles.MapTileObject;
 import com.polygongames.mario.actors.stageitems.Flag;
+import com.polygongames.mario.actors.weapons.Fireball;
+import com.polygongames.mario.actors.weapons.SpawningFireball;
+import com.polygongames.mario.gamesys.GameManager;
+import com.polygongames.mario.gamesys.LevelManager;
 import com.polygongames.mario.hud.Hud;
 import com.polygongames.mario.hud.ScoreIndicator;
 import com.polygongames.mario.utils.WorldContactListener;
 import com.polygongames.mario.utils.WorldCreator;
-import com.polygongames.mario.actors.Mario;
-import com.polygongames.mario.actors.effects.BrickDebris;
-import com.polygongames.mario.actors.effects.Effect;
-import com.polygongames.mario.actors.weapons.Fireball;
-import com.polygongames.mario.actors.weapons.SpawningFireball;
-import com.polygongames.mario.gamesys.GameManager;
 
 import java.util.LinkedList;
 
@@ -53,58 +54,61 @@ import java.util.LinkedList;
  */
 public class PlayScreen implements Screen {
 
-    private SuperMario game;
+    protected SuperMario game;
 
     public World world;
 
-    private float accumulator;
+    protected float accumulator;
 
-    private OrthographicCamera camera;
-    private Viewport viewport;
+    protected OrthographicCamera camera;
+    protected Viewport viewport;
 
-    private float cameraLeftLimit;
-    private float cameraRightLimit;
+    protected float cameraLeftLimit;
+    protected float cameraRightLimit;
 
-    private TiledMap tiledMap;
-    private OrthogonalTiledMapRenderer mapRenderer;
+    protected TiledMap tiledMap;
+    protected OrthogonalTiledMapRenderer mapRenderer;
 
-    private float mapWidth;
-//    private float mapHeight; // currently not used
+    protected float mapWidth;
+//    protected float mapHeight; // currently not used
 
-    private TextureAtlas textureAtlas;
+    protected TextureAtlas textureAtlas;
 
-    private Box2DDebugRenderer box2DDebugRenderer;
-    private boolean renderB2DDebug;
+    protected Box2DDebugRenderer box2DDebugRenderer;
+    protected boolean renderB2DDebug;
 
-    private Array<MapTileObject> mapTileObjects;
-    private Array<Enemy> enemies;
+    protected Array<MapTileObject> mapTileObjects;
+    protected Array<Enemy> enemies;
 
-    private Array<Item> items;
-    private LinkedList<SpawningItem> itemSpawnQueue;
+    protected Array<Item> items;
+    protected LinkedList<SpawningItem> itemSpawnQueue;
 
-    private Array<Effect> effects;
-    private LinkedList<SpawningEffect> effectSpawnQueue;
+    protected Array<Effect> effects;
+    protected LinkedList<SpawningEffect> effectSpawnQueue;
 
-    private Array<Fireball> fireballs;
-    private LinkedList<SpawningFireball> fireballSpawnQueue;
+    protected Array<Fireball> fireballs;
+    protected LinkedList<SpawningFireball> fireballSpawnQueue;
 
-    private Mario mario;
+    protected Mario mario;
 
-    private Hud hud;
-    private ScoreIndicator scoreIndicator;
+    protected Hud hud;
+    protected ScoreIndicator scoreIndicator;
 
-    private boolean playingHurryMusic;
-    private boolean playMusic;
+    protected boolean playingHurryMusic;
+    protected boolean playMusic;
 
-    private float countDown;
+    protected float countDown;
 
-    private Stage levelCompletedStage;
-    private boolean levelCompleted = false;
-    private boolean flagpoleMusicPlay = false;
-    private boolean levelCompletedMusicPlay = false;
+    protected Stage levelCompletedStage;
+    protected boolean levelCompleted = false;
+    protected boolean flagpoleMusicPlay = false;
+    protected boolean levelCompletedMusicPlay = false;
 
-    public PlayScreen(SuperMario game) {
+    protected String tmxFile;
+
+    public PlayScreen(SuperMario game, String tmxFile) {
         this.game = game;
+        this.tmxFile = tmxFile;
     }
 
     @Override
@@ -125,7 +129,7 @@ public class PlayScreen implements Screen {
 
         // load tmx tiled map
         TmxMapLoader tmxMapLoader = new TmxMapLoader();
-        tiledMap = tmxMapLoader.load("maps/Level_1-1.tmx");
+        tiledMap = tmxMapLoader.load(tmxFile);
         mapRenderer = new OrthogonalTiledMapRenderer(tiledMap, 1 / GameManager.PPM);
 
         mapWidth = ((TiledMapTileLayer) tiledMap.getLayers().get(0)).getWidth();
@@ -152,7 +156,7 @@ public class PlayScreen implements Screen {
 
 
         hud = new Hud(game.batch);
-        hud.setLevel("1-1");
+        hud.setLevel( Integer.toString( LevelManager.currentWorld ) + "-" + Integer.toString( LevelManager.currentLevel ) );
 
         scoreIndicator = new ScoreIndicator(this, game.batch);
 
@@ -181,7 +185,8 @@ public class PlayScreen implements Screen {
         setLevelCompletedScreen.setRunnable(new Runnable() {
             @Override
             public void run() {
-                game.setScreen(new GameOverScreen(game));
+                LevelManager.loadNextLevel( game );
+//                game.setScreen(new GameOverScreen(game));
                 dispose();
             }
         });
@@ -226,7 +231,7 @@ public class PlayScreen implements Screen {
         itemSpawnQueue.add(new SpawningItem(x, y, type));
     }
 
-    private void handleSpawningItem() {
+    protected void handleSpawningItem() {
         if (itemSpawnQueue.size() > 0) {
             SpawningItem spawningItem = itemSpawnQueue.poll();
 
@@ -441,7 +446,7 @@ public class PlayScreen implements Screen {
         }
     }
 
-    private void cleanUpDestroyedObjects() {
+    protected void cleanUpDestroyedObjects() {
         /*
         for (int i = 0; i < mapTileObjects.size; i++) {
             if (mapTileObjects.get(i).isDestroyed()) {

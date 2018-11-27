@@ -12,6 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.polygongames.mario.SuperMario;
 import com.polygongames.mario.gamesys.GameManager;
+import com.polygongames.mario.gamesys.LevelManager;
 
 /**
  *
@@ -53,7 +54,7 @@ public class GameOverScreen implements Screen {
         countDown -= delta;
 
         if (countDown < 0.0f) {
-            game.setScreen(new PlayScreen(game));
+            game.setScreen(new PlayScreen(game, LevelManager.currentTmxFile ));
             dispose();
         }
     }

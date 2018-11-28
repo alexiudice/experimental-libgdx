@@ -1,0 +1,314 @@
+
+total.png
+size: 1024,128
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Coin
+  rotate: false
+  xy: 566, 36
+  size: 64, 16
+  orig: 64, 16
+  offset: 0, 0
+  index: -1
+CoinHUD
+  rotate: false
+  xy: 390, 26
+  size: 24, 8
+  orig: 24, 8
+  offset: 0, 0
+  index: -1
+Debris
+  rotate: false
+  xy: 810, 68
+  size: 48, 16
+  orig: 48, 16
+  offset: 0, 0
+  index: -1
+FireBall
+  rotate: false
+  xy: 632, 36
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+FireMario
+  rotate: false
+  xy: 2, 88
+  size: 336, 32
+  orig: 336, 32
+  offset: 0, 0
+  index: -1
+Flag
+  rotate: false
+  xy: 294, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+FlippingCoin
+  rotate: false
+  xy: 228, 2
+  size: 64, 16
+  orig: 64, 16
+  offset: 0, 0
+  index: -1
+Flower
+  rotate: false
+  xy: 744, 68
+  size: 64, 16
+  orig: 64, 16
+  offset: 0, 0
+  index: -1
+Goomba
+  rotate: false
+  xy: 340, 18
+  size: 48, 16
+  orig: 48, 16
+  offset: 0, 0
+  index: -1
+Koopa
+  rotate: false
+  xy: 904, 88
+  size: 96, 32
+  orig: 96, 32
+  offset: 0, 0
+  index: -1
+Mario_big
+  rotate: false
+  xy: 2, 54
+  size: 336, 32
+  orig: 336, 32
+  offset: 0, 0
+  index: -1
+Mario_big_invincible1
+  rotate: false
+  xy: 340, 54
+  size: 336, 32
+  orig: 336, 32
+  offset: 0, 0
+  index: -1
+Mario_big_invincible2
+  rotate: false
+  xy: 340, 88
+  size: 336, 32
+  orig: 336, 32
+  offset: 0, 0
+  index: -1
+Mario_big_invincible3
+  rotate: false
+  xy: 2, 20
+  size: 336, 32
+  orig: 336, 32
+  offset: 0, 0
+  index: -1
+Mario_small
+  rotate: false
+  xy: 678, 86
+  size: 224, 16
+  orig: 224, 16
+  offset: 0, 0
+  index: -1
+Mario_small_invincible1
+  rotate: false
+  xy: 2, 2
+  size: 224, 16
+  orig: 224, 16
+  offset: 0, 0
+  index: -1
+Mario_small_invincible2
+  rotate: false
+  xy: 340, 36
+  size: 224, 16
+  orig: 224, 16
+  offset: 0, 0
+  index: -1
+Mario_small_invincible3
+  rotate: false
+  xy: 678, 104
+  size: 224, 16
+  orig: 224, 16
+  offset: 0, 0
+  index: -1
+Mushroom
+  rotate: false
+  xy: 312, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+Star
+  rotate: false
+  xy: 678, 68
+  size: 64, 16
+  orig: 64, 16
+  offset: 0, 0
+  index: -1
+blooper_move
+  rotate: false
+  xy: 696, 34
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+blooper_prepare
+  rotate: false
+  xy: 894, 18
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+bulletBill
+  rotate: false
+  xy: 786, 34
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+cheepcheep_moving
+  rotate: false
+  xy: 932, 54
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+cheepcheep_still
+  rotate: false
+  xy: 896, 52
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+goomba_left_step
+  rotate: false
+  xy: 914, 54
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+goomba_right_step
+  rotate: false
+  xy: 968, 54
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+goomba_squashed
+  rotate: false
+  xy: 678, 34
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+hammer_left
+  rotate: false
+  xy: 732, 34
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+hammer_right
+  rotate: false
+  xy: 768, 34
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+hammerbro_run
+  rotate: false
+  xy: 950, 54
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+hammerbro_run_throw
+  rotate: false
+  xy: 860, 52
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+hammerbro_still
+  rotate: false
+  xy: 878, 52
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+hammerbro_still_throw
+  rotate: false
+  xy: 912, 18
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+koopa_moving1
+  rotate: false
+  xy: 1002, 88
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+koopa_moving2
+  rotate: false
+  xy: 750, 34
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+koopa_shell
+  rotate: false
+  xy: 822, 34
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+koopa_shell_legs
+  rotate: false
+  xy: 876, 18
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+lakito
+  rotate: false
+  xy: 858, 18
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+lakito_hidding
+  rotate: false
+  xy: 840, 34
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+parakoopa1
+  rotate: false
+  xy: 986, 54
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+parakoopa2
+  rotate: false
+  xy: 1004, 54
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+plant_closed
+  rotate: false
+  xy: 804, 34
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+plant_open
+  rotate: false
+  xy: 714, 34
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1

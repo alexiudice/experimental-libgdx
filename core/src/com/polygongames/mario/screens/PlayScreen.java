@@ -121,7 +121,7 @@ public class PlayScreen implements Screen {
 
         camera.position.set(GameManager.V_WIDTH / 2, GameManager.V_HEIGHT / 2, 0);
 
-        textureAtlas = new TextureAtlas("imgs/actors.atlas");
+        textureAtlas = new TextureAtlas("imgs/total.atlas");
 
         // create Box2D world
         world = new World(GameManager.GRAVITY, true);

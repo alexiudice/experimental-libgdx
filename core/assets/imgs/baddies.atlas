@@ -1,0 +1,174 @@
+
+baddies.png
+size: 512,64
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+blooper_move
+  rotate: false
+  xy: 218, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+blooper_prepare
+  rotate: false
+  xy: 398, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+bulletBill
+  rotate: false
+  xy: 326, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+cheepcheep_moving
+  rotate: false
+  xy: 92, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+cheepcheep_still
+  rotate: false
+  xy: 38, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+goomba_left_step
+  rotate: false
+  xy: 56, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+goomba_right_step
+  rotate: false
+  xy: 146, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+goomba_squashed
+  rotate: false
+  xy: 200, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+hammer_left
+  rotate: false
+  xy: 254, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+hammer_right
+  rotate: false
+  xy: 290, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+hammerbro_run
+  rotate: false
+  xy: 308, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+hammerbro_run_throw
+  rotate: false
+  xy: 74, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+hammerbro_still
+  rotate: false
+  xy: 20, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+hammerbro_still_throw
+  rotate: false
+  xy: 416, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+koopa_moving1
+  rotate: false
+  xy: 2, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+koopa_moving2
+  rotate: false
+  xy: 272, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+koopa_shell
+  rotate: false
+  xy: 362, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+koopa_shell_legs
+  rotate: false
+  xy: 380, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+lakito
+  rotate: false
+  xy: 110, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+lakito_hidding
+  rotate: false
+  xy: 128, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+parakoopa_1
+  rotate: false
+  xy: 164, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+parakoopa_2
+  rotate: false
+  xy: 182, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+plant_closed
+  rotate: false
+  xy: 344, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+plant_open
+  rotate: false
+  xy: 236, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1

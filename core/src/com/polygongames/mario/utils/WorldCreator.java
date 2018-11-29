@@ -6,6 +6,7 @@ import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.objects.TiledMapTileMapObject;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
+import com.polygongames.mario.actors.enemies.BulletBill;
 import com.polygongames.mario.actors.enemies.Enemy;
 import com.polygongames.mario.actors.maptiles.Brick;
 import com.polygongames.mario.actors.maptiles.CoinBlock;
@@ -115,6 +116,16 @@ public class WorldCreator {
                 float y = ((TiledMapTileMapObject) mapObject).getY();
 
                 enemies.add(new Koopa(playScreen, (x + 8) / GameManager.PPM, (y + 8) / GameManager.PPM));
+            }
+        }
+
+        mapLayer = tiledMap.getLayers().get("BulletBills");
+        if (mapLayer != null) {
+            for (MapObject mapObject : mapLayer.getObjects()) {
+                float x = ((TiledMapTileMapObject) mapObject).getX();
+                float y = ((TiledMapTileMapObject) mapObject).getY();
+
+                enemies.add(new BulletBill(playScreen, (x + 8) / GameManager.PPM, (y + 8) / GameManager.PPM));
             }
         }
 
